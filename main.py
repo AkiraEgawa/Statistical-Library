@@ -10,8 +10,10 @@ line = lnreg(df)
 dfTest=pd.read_csv("csv/peng_scaled.csv")
 dfTest = dfTest.iloc[:, [1,2]]
 dfTest.dropna()
+print(dfTest)
 for i in range(len(dfTest)):
-    dfTest.loc[i,1] = lineCalc(line[0], line[1], dfTest.iloc[i].iloc[0])
+    dfTest.loc[i,"bill_scaled"] = lineCalc(line[0], line[1], df.iloc[i,0])
+print(dfTest)
 
 meanSquaredError = mse(dfTest, df)
 print(meanSquaredError)
