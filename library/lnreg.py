@@ -1,6 +1,6 @@
 # This will be linear regression (thankfully, I did some math to just have a singular math function lol)
 # Takes a dataframe with 2 columns (first column x, second column y) and returns the a and b for the line y=ax+b
-def lnreg(df, x):
+def lnreg(df):
     """
     Given datapoints and a line to estimate it as y = ax + b
     a = (mean(xy)-mean(x)mean(y))/(mean(x^2)-mean(x)^2)

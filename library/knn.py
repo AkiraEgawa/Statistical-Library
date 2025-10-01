@@ -1,5 +1,9 @@
 import pandas as pd
 
+df = pd.read_csv("../csv/peng_scaled.csv")
+print(df.iloc[0].iloc[1])
+print(len(df))
+
 # Takes a dataframe, the number of nearest neighbors, and the x to estimate
 # Dataframe must have 2 columns, column 0 is x and column 1 is y
 def knn(df, k, x):
