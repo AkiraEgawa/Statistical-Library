@@ -7,8 +7,8 @@ import numpy as np
 # pass in a dataframe
 # returns 4 training sets and 1 test set
 # 80%-20% for training to test
-def ffVal(df):
-    df = df.sample(frac = 1, random_state = 69).reset_index(drop=True)
+def fourFold(df):
+    df = df.sample(frac = 1, random_state = 609).reset_index(drop=True)
     folds = np.array_split(df, 5)
     test_df = folds[0]
     train = folds[1:]
